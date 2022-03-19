@@ -1,0 +1,14 @@
+{
+  "name": "recp",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "dns": "0.2.2",
+    "mongoose": "6.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "browserslist": []
+}

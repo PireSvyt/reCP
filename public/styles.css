@@ -1,0 +1,153 @@
+/************************************* VARIABLES *************************************/
+:root {
+  --color-strong: steelblue;
+  --color-light: powderblue;
+  --color-verylight: #f2fafb;
+  --color-highlight: orange;
+
+  --radius-regular: 12px;
+
+  --font-regular: "Arial Narrow";
+
+  /* Tile */
+  --tile-width: 250px;
+  --tile-border-width: 2pt;
+  --tile-border-radius: 10pt;
+}
+
+/************************************* DEFAULTS *************************************/
+h1 {
+  font-family: var(--font-regular);
+}
+h2 {
+  font-family: var(--font-regular);
+}
+h3 {
+  font-family: var(--font-regular);
+}
+div {
+  font-family: var(--font-regular);
+}
+ul {
+  font-family: var(--font-regular);
+}
+li {
+  font-family: var(--font-regular);
+}
+
+/************************************* TEST SUITES *************************************/
+/* Remove default bullets */
+ul,
+#testsuite_ul {
+  list-style-type: none;
+}
+/* Remove margins and padding from the parent ul */
+#testsuite_ul {
+  margin: 10px;
+  padding: 0;
+}
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+}
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}
+
+/* Console */
+.console_ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.lognormal {
+  color: grey;
+  margin: 0;
+  padding: 0;
+  font-size: smaller;
+}
+.loginfo {
+  color: blue;
+  margin: 0;
+  padding: 0;
+}
+.logerror {
+  color: darkred;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.root {
+  background-color: var(--color-verylight);
+}
+
+/************************************* NAV BAR *************************************/
+.nav_bar_div {
+  background-color: var(--color-light);
+}
+.nav_bar_button {
+  /*background-color: var(--color-strong);
+	color: var(--color-highlight);
+	width: 20%;*/
+}
+
+/************************************* SECTIONS *************************************/
+.section_div {
+  /*width: var(--tile-width);*/
+  /*
+	
+	background-color: var(--color-verylight);
+	border-radius: var(--radius-regular);
+	border: solid;
+	border-color: var(--color-strong);
+	border-width: var(--tile-border-width);
+	*/
+}
+.section_title {
+}
+.TBD_button {
+}
+.floating_button {
+}
+.recipe_ul {
+}
+#myrecipies_div .recipe_ul {
+}
+#thisweek_div .recipe_ul {
+}
+
+.toggled {
+  background-color: var(--color-light);
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.snackmessage {
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 4px; /* Rounded borders */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 10%; /* Center the snackbar */
+  right: 10%; /* Center the snackbar */
+}
