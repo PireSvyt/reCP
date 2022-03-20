@@ -5,6 +5,7 @@ import {
 } from "../../src/models/toolkit.js";
 import { Recipe } from "../../src/models/recipe.js";
 import { note } from "../index.js";
+const apiIngredient = require("../api/ingredient.js");
 
 export class Model {
   // -
@@ -62,6 +63,10 @@ export class Model {
     // TESTED
     // Recipe sort
     this.currentRecipe.clean();
+
+    // Fetch ingredients from server
+    this.ingredients = apiIngredient.getIngredients();
+
     // Ingredients update
     for (const [ing_key, ing] of Object.entries(
       this.currentRecipe.ingredients
